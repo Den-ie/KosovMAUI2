@@ -5,15 +5,17 @@
 
     <ScrollView>
         <VerticalStackLayout>
-            <StackLayout
+            <StackLayout 
                 Spacing="0"
                 Padding="0, 0"
                 VerticalOptions="Start">
 
+                <!--Первое задание-->
                 <Label Text="Задание №1"/>
 
+                <!--Label точки-->
                 <StackLayout Spacing="10" 
-                             Margin="10"
+                             Margin="5,20,5,-10"
                              Orientation="Horizontal">
 
                     <Label Text="Точка A"
@@ -29,7 +31,8 @@
                            HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 
-                <StackLayout Spacing="10" 
+                <!--Entry точки-->
+                <StackLayout Spacing="15" 
                              Margin="10"
                              Orientation="Horizontal">
 
@@ -47,10 +50,13 @@
 
                 </StackLayout>
 
-                <Button Text="Рассчитать"/>
+                <Button Text="Рассчитать"
+                        Margin="5,0"
+                        Clicked="Quest1"/>
 
-                <StackLayout Spacing="10" 
-                             Margin="10"
+                <!--Label отрезки-->
+                <StackLayout Spacing="15" 
+                             Margin="5,20,5,-10"
                              Orientation="Horizontal">
 
                     <Label Text="Отрезок AC" 
@@ -66,8 +72,9 @@
                            HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 
-                <StackLayout  Spacing="0" 
-                              Margin="2"
+                <!--Entry отрезки-->
+                <StackLayout  Spacing="15" 
+                              Margin="10,10,10,50"
                               Orientation="Horizontal">
 
                     <Entry x:Name="AC"
@@ -77,26 +84,29 @@
 
                     <Entry x:Name="BC"
                            IsEnabled="False"
+                           HorizontalTextAlignment="Center"
                            HorizontalOptions="FillAndExpand"/>
 
                     <Entry x:Name="Summ"
                            IsEnabled="False"
+                           HorizontalTextAlignment="Center"
                            HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 
-                <Label Text = " "/>
-                <Label Text = " "/>
-                <Label Text = " "/>
-                <Label Text = " "/>
-                
+                <!--Второе задание-->
                 <Label Text="Задание №2"/>
 
+                <!--Кол-во секунд-->
                 <Label Text="Введите кол-во секунд"
-                       HorizontalTextAlignment="Center"/>
-                <Entry x:Name="zn3"/>
+                       HorizontalTextAlignment="Center"
+                       Margin="5,20,5,-10"/>
+                <Entry x:Name="zn3"
+                       Margin="5"/>
 
-                <Button Text="Рассчитать в минутах" />
+                <Button Text="Рассчитать в минутах"
+                        Margin="5,0"/>
 
+                <!--Кол-во минут-->
                 <Label Text="Кол-во минут с последнего часа"
                        HorizontalTextAlignment="Center"/>
 
