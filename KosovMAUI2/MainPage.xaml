@@ -1,21 +1,111 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KosovMAUI2.MainPage">
 
     <ScrollView>
         <VerticalStackLayout>
-            <StackLayout 
-            Spacing="0"
-            Padding="0,0"
-            VerticalOptions="Start">
+            <StackLayout
+                Spacing="0"
+                Padding="0, 0"
+                VerticalOptions="Start">
 
-                    <Button Text="Ku"
-                            x:Name="Buton"
-                            Clicked=""/>
+                <Label Text="Задание №1"/>
+
+                <StackLayout Spacing="10" 
+                             Margin="10"
+                             Orientation="Horizontal">
+
+                    <Label Text="Точка A"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="Точка B"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="Точка C" 
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Spacing="10" 
+                             Margin="10"
+                             Orientation="Horizontal">
+
+                    <Entry x:Name="pointA"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Entry x:Name="pointB"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Entry x:Name="pointC"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+
+                </StackLayout>
+
+                <Button Text="Рассчитать"/>
+
+                <StackLayout Spacing="10" 
+                             Margin="10"
+                             Orientation="Horizontal">
+
+                    <Label Text="Отрезок AC" 
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="Отрезок BC" 
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="Сумма отрезков" 
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <StackLayout  Spacing="0" 
+                              Margin="2"
+                              Orientation="Horizontal">
+
+                    <Entry x:Name="AC"
+                           IsEnabled="False"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Entry x:Name="BC"
+                           IsEnabled="False"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Entry x:Name="Summ"
+                           IsEnabled="False"
+                           HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <Label Text = " "/>
+                <Label Text = " "/>
+                <Label Text = " "/>
+                <Label Text = " "/>
+                
+                <Label Text="Задание №2"/>
+
+                <Label Text="Введите кол-во секунд"
+                       HorizontalTextAlignment="Center"/>
+                <Entry x:Name="zn3"/>
+
+                <Button Text="Рассчитать в минутах" />
+
+                <Label Text="Кол-во минут с последнего часа"
+                       HorizontalTextAlignment="Center"/>
+
+                <Entry x:Name="rez3"
+                       IsEnabled="False"/>
 
             </StackLayout>
         </VerticalStackLayout>
+
     </ScrollView>
 
 </ContentPage>
