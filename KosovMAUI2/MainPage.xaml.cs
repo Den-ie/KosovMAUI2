@@ -29,5 +29,27 @@ public partial class MainPage : ContentPage
             }
         }
     }
-}
 
+    private void Quest2(object sender, EventArgs e)
+    {
+        if (!int.TryParse(Seconds.Text, out int sec)) DisplayAlert("Ошибка", "Введите корректное значение секунд", "Продолжить");
+        else if (sec < 0) DisplayAlert("Ошибка", "Введите положительное значение секунд", "Продолжить");
+        else
+        {
+            int min = 0;
+
+            while (sec >= 3600)
+            {
+                sec -= 3600;
+            }
+
+            for (int i = 0; sec >= 60; i++)
+            {
+                sec = sec - 60;
+                min += 1;
+            }
+
+            Minutes.Text = Convert.ToString(min);
+        }
+    }
+}

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KosovMAUI2.MainPage">
-
+    
     <ScrollView>
         <VerticalStackLayout>
             <StackLayout 
@@ -38,15 +38,18 @@
 
                     <Entry x:Name="pointA"
                            HorizontalTextAlignment="Center"
-                           HorizontalOptions="FillAndExpand"/>
+                           HorizontalOptions="FillAndExpand"
+                           Keyboard="Numeric"/>
 
                     <Entry x:Name="pointB"
                            HorizontalTextAlignment="Center"
-                           HorizontalOptions="FillAndExpand"/>
+                           HorizontalOptions="FillAndExpand"
+                           Keyboard="Numeric"/>
 
                     <Entry x:Name="pointC"
                            HorizontalTextAlignment="Center"
-                           HorizontalOptions="FillAndExpand"/>
+                           HorizontalOptions="FillAndExpand"
+                           Keyboard="Numeric"/>
 
                 </StackLayout>
 
@@ -100,19 +103,24 @@
                 <Label Text="Введите кол-во секунд"
                        HorizontalTextAlignment="Center"
                        Margin="5,20,5,-10"/>
-                <Entry x:Name="zn3"
-                       Margin="5"/>
+                <Entry x:Name="Seconds"
+                       Margin="5"
+                       Keyboard="Numeric"/>
 
                 <Button Text="Рассчитать в минутах"
-                        Margin="5,0"/>
+                        Margin="5,0,5,20"
+                        Clicked="Quest2"/>
 
                 <!--Кол-во минут-->
                 <Label Text="Кол-во минут с последнего часа"
                        HorizontalTextAlignment="Center"/>
 
-                <Entry x:Name="rez3"
+                <Entry x:Name="Minutes"
                        IsEnabled="False"/>
 
+                <!--ЛЯГУШКА-->
+                <Image Source="frog.png"
+                       Margin="0,85,0,0"/>
             </StackLayout>
         </VerticalStackLayout>
 
